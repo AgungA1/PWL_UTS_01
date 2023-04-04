@@ -27,4 +27,7 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('profile',['user'=>$user]);
     }
+    public function redirect() {
+        return redirect()->route('login');
+    }
 }
